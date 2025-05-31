@@ -1,0 +1,158 @@
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main: hsl(217, 54%, 11%); /* (main BG) */
+    --Very-dark-blue-card: hsl(216, 50%, 16%); /* (card BG) */
+    --Very-dark-blue-line: hsl(215, 32%, 27%); /* (line) */
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit';
+    background-color: var(--Very-dark-blue-main);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+}
+
+.main__card {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    max-width: 375px;
+    padding: 22px;  
+    margin: 20px;
+    max-height: 100%;
+    border-radius: 15px;
+    background-color: var(--Very-dark-blue-card);
+}
+
+.main__card-image {
+    position: relative;
+    border-radius: 12px;
+    max-width: 100%;
+    height: 300px;
+    transition: all 0.3s;
+}
+
+.main__card-image-equilibrium {
+    position: absolute;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.main__card h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--White);
+}
+
+.main__card-description {
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--Soft-blue);
+}
+
+.main__card-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__card-footer-right {
+    display: flex;
+    gap: 10px;
+}
+
+.main__card-footer-left p {
+    font-weight: 600;
+    color: var(--Cyan);
+}
+
+.main__card-footer-left {
+    gap: 10px;
+    display: flex;
+}
+
+.main__card-footer-right p {
+    color: var(--Soft-blue);
+}
+
+.main__card-line {
+    min-height: 1px;
+    width: 100%;
+    background-color: var(--Very-dark-blue-line);
+}
+
+.main__card-creator {
+    display: flex;
+    gap: 5px;  
+    align-items: center;
+}
+
+.main__card-creator img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--White);
+    margin-right: 10px;
+}
+
+.main__card-creator-text {
+    color: var(--Soft-blue);
+}
+
+.main__card-creator-name {
+    color: var(--White);
+}
+
+.background-blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background-color: var(--Cyan);
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.5s;
+}
+
+.background-blue img {
+    width: 50px;
+    height: 50px;
+}
+
+/* ACTIVE STATES */
+
+.background-blue:hover {
+    opacity: 0.6;
+}
+
+.main__card-image:hover {
+    cursor: pointer;
+}
+
+.color-change {
+    transition: all 0.3s;
+}
+
+.color-change:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+

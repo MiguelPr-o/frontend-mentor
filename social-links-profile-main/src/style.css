@@ -1,0 +1,79 @@
+:root {
+   --Green: hsl(75, 94%, 57%);
+   --White: hsl(0, 0%, 100%);
+   --Grey-500: hsl(0, 0%, 85%);
+   --Grey-700: hsl(0, 0%, 20%);
+   --Grey-800: hsl(0, 0%, 12%);
+   --Grey-900: hsl(0, 0%, 8%);
+}
+
+body{
+   font-family: 'Inter';
+   font-size: 14px;
+   background-color: var(--Grey-900);
+}
+
+.main {
+   height: 100vh;
+   display: flex;
+}
+
+.main__card{
+   text-align: center;
+   margin: auto;
+   width: 375px;
+   padding: 20px 0;
+   border-radius: 12px;
+   background-color: var(--Grey-800);
+}
+
+.main__card__profile {
+   width: 80px;
+   border-radius: 50%;
+}
+
+h2 {
+   font-size: 1.4em;
+   color: var(--White);
+}
+
+.main__card__name {
+   font-weight: 700;
+}
+
+.main__card__location {
+   margin: -10px 0 25px 0;
+   font-size: 0.85em;
+   color: var(--Green);
+}
+
+.main__card__profession {
+   font-size: 0.8em;
+   font-family: 700;
+   color: var(--Grey-500);
+}
+
+.main__card ul{
+   display: flex;
+   flex-direction: column;
+   gap: 18px;
+}
+
+ul li{
+   display: block;
+   font-weight: 900;
+   color: var(--White);
+   border-radius: 10px;
+   list-style: none;
+   width: 75%;
+   padding: 13px;
+   margin: 0 0 0 10px;
+   background-color: var(--Grey-700);
+   transition: 0.34s all;
+}
+
+ul li:hover{
+   cursor: pointer;
+   background-color: var(--Green);
+   color: var(--Grey-900);
+}

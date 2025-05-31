@@ -1,0 +1,17 @@
+@font-face {
+   font-family: 'Noto Sans';
+   font-weight: 500;
+   src: url('static/NotoSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Noto Sans';
+   font-weight: 400;
+   src: url('static/NotoSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Noto Sans';
+   font-weight: 700;
+   src: url('static/NotoSans-Bold.ttf') format('truetype');
+}

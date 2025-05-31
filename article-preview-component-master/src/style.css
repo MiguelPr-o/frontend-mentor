@@ -1,0 +1,188 @@
+:root{
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+body{
+    margin: 0;
+    font-size: 13px;
+    background-color: var(--Light-Grayish-Blue);
+}
+
+.main{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__section{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: clamp(300px, 80%, 700px);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+.main__section img{
+    object-fit: cover;
+    object-position: top;
+    height: 250px;
+    width: 100%;
+    background: contain;
+}
+
+.main__section-profile{
+    display: flex; 
+    justify-content: space-between;
+}
+
+/* DIVISOR 2 DE LA SECTION */
+
+.main__section-info p{
+    line-height: 1.3;
+    color: var(--Grayish-Blue);
+    margin: 30px 30px;
+    font-size: 1.2em;
+}
+
+h1{
+    line-height: 1.2;
+    margin: 15px 30px 0 30px;
+    font-size: 1.67em;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+.main__section-profile-info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 -30px 15px 30px;
+}
+
+.main__section-profile-info img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.main__section-profile-info-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.main__section-profile-info p{
+    margin: 0;
+    font-size: 1.3em;
+    color: var(--Grayish-Blue);
+}
+
+.main__section-profile-info h2{
+    margin: 0;
+    font-size: 1.3em;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+.main__section-profile-social-media{
+    background-color: var(--Light-Grayish-Blue);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__section-profile-social-media:hover{
+    background-color: var(--Grayish-Blue);
+    cursor: pointer;
+}
+
+.social-media-img{
+    width: 22px;
+    height: 18px;
+    background: url("../images/icon-share.svg");
+    background-size: cover;
+}
+
+
+/* FIN DE LA DIVISION 2 DE LA SECTION */
+
+/*SECCION DE CONTACTOS */
+
+.main__section-profile-social{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    justify-content: space-around;
+}
+
+.main__section-profile-contact img{
+    width: 25px;
+    height: 25px;
+    align-self: center;
+}
+
+.main__section-profile-contact{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main__section-profile-contact p{
+    color: var(--Grayish-Blue);
+    letter-spacing: 3;
+    
+}
+
+.main__section-profile-share{
+    align-self: center;
+    display: flex;
+    justify-content: end;
+    background-color: var(--Grayish-Blue);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__section-profile-share:hover{
+    background-color: var(--Light-Grayish-Blue);
+    cursor: pointer;
+}
+
+@media (width >= 700px){
+    .main__section{
+        flex-direction: row;
+    }
+
+    .main__section img{
+        height: 100%;
+        background: cover;
+    }
+
+    .main__section-profile-contact img{
+        width: 25px;
+        height: 25px;
+    }
+
+    .main__section img{
+        object-position: left;
+    }
+}
+
+
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */

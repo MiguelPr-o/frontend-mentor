@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+}
+
+*{
+    font-family: sans-serif;
+}
+
+.start-page{
+    background-color: hsl(275, 100%, 97%);
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.start-img{
+    height: 30%;
+    width: 100%;
+    background:url(assets/images/background-pattern-mobile.svg);
+}
+
+.start__section-faq{
+    background-color: #Fff;
+    width: 80%;
+    min-height: 60%;
+    border-radius: 11px;
+    position: absolute;
+    align-self: center;
+}
+
+.start__section-header{
+    display: flex;
+    gap: 30px;
+    margin: 0 20px;
+    font-size: 1.8rem;
+}
+
+article{
+    text-wrap: balance;
+    margin: 0 20px;
+}
+
+summary{
+    display: flex;
+    gap: 20px;    
+    justify-content: space-between;
+}
+
+summary:hover{
+    color: hsl(292, 69%, 24%)
+}
+
+.summary-minus{
+    display: none;
+}
+
+details[open] .summary-plus{
+    display: none;
+}
+
+details[open] .summary-minus{
+    display: block;
+}
+
+details[close] .summary-minus{
+    display: none;
+}
+
+@media screen and (min-width:780px){
+    .start__section-faq{
+        max-width: 50%;
+    }
+}

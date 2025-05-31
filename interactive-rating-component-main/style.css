@@ -1,0 +1,162 @@
+/* DEFINIENDO PROPIEDADES GLOBALES */
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Dark-Blue2: hsl(213, 19%, 23%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --Orange: hsl(25, 97%, 53%);
+}
+
+*{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body{
+    font-size: 16px;
+    background: var(--Very-Dark-Blue);
+    min-height: 100vh;
+    display: flex;
+}
+
+/* FIN DE LAS DEFINICIONES GLOBALES */
+
+.main{
+    min-height: 100vh;
+    display: flex;
+    margin: auto;
+}
+
+.section{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 375px;
+    background: var(--Dark-Blue);
+    border-radius: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.section__start-img{
+    width: 20px;
+    height: 20px;
+    padding: 14px;
+    border-radius: 50%;
+    background-color: var(--Dark-Blue2);
+}
+
+.start-img{
+    width: 100%;
+    height: 100%;
+    background: url(images/icon-star.svg) no-repeat;
+}
+
+h1{
+    color: var(--White);
+}
+
+.section p{
+    font-size: 0.88em;
+    color: var(--Light-Grey);
+}
+
+/* APARTADO DE LA ELECCION DE NUMEROS */
+
+.section__number-selection{
+    display: flex;
+    height: 40px;
+    background-color: transparent;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.background-number{
+    min-height: 100%;
+    width: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-radio{
+    cursor: pointer;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Dark-Blue2);
+    border-radius: 50%;
+    transition: 0.43s all;
+}
+
+.number-radio:checked{
+    background-color: var(--Orange);
+}
+
+.number-radio:hover{
+    background-color: var(--White);
+}
+
+.section__number-selection label{
+    cursor: pointer;
+    position: absolute;
+    color: var(--Light-Grey);
+}
+
+.number-radio:is(:checked, :hover) + label {
+    color: #000;
+}
+
+/* FIN DEL APARTADO DE LA ELECCION DE NUMEROS */
+
+.submit-selection{
+    cursor: pointer;
+    margin-top: 15px;
+    background: var(--Orange);
+    width: 100%;
+    padding: 10px 0;
+    border: 0;
+    letter-spacing: 2px;
+    border-radius: 27px;
+    transition: 0.34s all;
+}
+
+.submit-selection:hover{
+    background: var(--White);
+}
+
+/* SECCION DE AGRADECIMIENTO */
+
+.section-thank-you-img{
+    width: 170px;
+    height: 110px;
+    margin: auto;
+    background: url(images/illustration-thank-you.svg) top / cover;
+}
+
+.number-selected{
+    background-color: var(--Dark-Blue2);
+    color: var(--Orange);
+    border-radius: 24px;
+    padding: 5px 0;
+    width: 60%;
+    margin: 10px auto 10px;
+    font-size: 0.88em;
+    text-align: center;
+
+}
+
+.section-thank-you h2{
+    text-align: center;
+    color: var(--White);
+}
+
+.section-thank-you p{
+    font-size: 0.92em;
+    text-align: center;
+    color: var(--Light-Grey);
+}

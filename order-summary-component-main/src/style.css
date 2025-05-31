@@ -1,0 +1,140 @@
+:root {
+   --Pale-blue: hsl(225, 100%, 94%);
+   --Bright-blue: hsl(245, 75%, 52%);
+   --Very-pale-blue: hsl(225, 100%, 98%);
+   --Desaturated-blue: hsl(224, 23%, 55%);
+   --Dark-blue: hsl(223, 47%, 23%);
+   --White: hsl(0, 0%, 100%);
+}
+
+*{
+   padding: 0;
+   margin: 0;
+}
+
+body {
+   background-color: var(--Pale-blue);
+   font-family: 'Red Hat Display', sans-serif;
+}
+
+.main {
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.main__container {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   border-radius: 15px;
+   background-color: var(--White);
+   max-width: 355px;
+   min-height: 500px;
+   padding: 0 0 25px 0;
+   box-shadow: 0 15px 15px var(--Desaturated-blue);
+}
+
+/* Background image */
+
+.main__container__background img{
+   width: 100%;
+   border-radius: 12px 12px 0 0;
+}
+
+/* Summary Section */
+
+.main__container__summary {
+   display: flex;
+   flex-direction: column;
+   gap: 18px;
+   text-align: center;
+   padding: 0 30px;
+   line-height: 1.5;
+}
+
+.main__summary-description {
+   color: var(--Desaturated-blue);
+}
+
+h1 {
+   color: var(--Dark-blue);
+   font-weight: 900;
+   font-size: 1.6rem;
+}
+
+.main__container__summary__annual-plan {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px;
+   background-color: var(--Very-pale-blue);
+   border-radius: 12px;
+}
+
+.annual-plan {
+   font-weight: 900;
+   font-size: 0.96rem;
+   color: var(--Dark-blue);
+}
+
+.annual-plan-price {
+   color: var(--Desaturated-blue);
+   font-size: 0.9rem;
+
+}
+
+/* Annual Plan Link */
+
+.main__container__summary__annual-plan a {
+   color: var(--Bright-blue);
+   font-weight: 900;
+   font-size: 0.83rem;
+   transition: all 0.4s;
+}
+
+.main__container__summary__buttons {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   
+}
+
+.main__container__summary__buttons a{
+   text-decoration: none;
+}
+
+.proceed-payment {
+   background-color: var(--Bright-blue);
+   padding: 10px;
+   color: var(--White);
+   border-radius: 13px;
+   font-weight: 700;
+   font-size: 0.9rem;
+   box-shadow: 0 15px 15px var(--Pale-blue);
+   transition: all 0.3s;
+}
+
+.cancel-order {
+   color: var(--Desaturated-blue);
+   font-weight: 900;
+   font-size: 0.93rem;
+   transition: all 0.3s;
+
+}
+
+ /* Hover effects */
+
+.main__container__summary__annual-plan a:hover{
+   text-decoration: none;
+   opacity: 0.8;
+}
+
+.proceed-payment:hover {
+   opacity: 0.8;
+}
+
+.cancel-order:hover {
+   color: var(--Dark-blue)
+}

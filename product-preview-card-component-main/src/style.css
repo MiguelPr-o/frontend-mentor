@@ -1,0 +1,140 @@
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Very-Dark-cyan: hsl(158, 36%, 17%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--Cream);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 375px;
+    height: 80vh;
+    margin: auto;
+    border-radius: 15px;
+    background-color: var(--White);
+}
+
+.main__background {
+    background-image: url('../images/image-product-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 18px 18px 0 0;
+    width: 100%;
+    height: 40%;
+}
+
+.main__content {
+    height: 60%;    
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding: 25px 21px;
+}
+
+h2 {
+    font-family: 'Monstserrat', sans-serif;
+    font-weight: 200;
+    color: var(--Dark-grayish-blue);
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+}
+
+h1 {
+    line-height: 1;
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+}
+
+.main__description {
+    color: var(--Dark-grayish-blue);
+    font-family: 'Monstserrat', sans-serif;
+    font-weight: 200;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.main__rating {
+    display: flex;
+    gap: 12px;
+}
+
+.main__price {
+    color: var(--Dark-cyan);
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.main__discount {
+    color: var(--Dark-grayish-blue);
+    font-family: 'Monstserrat', sans-serif;
+    font-weight: 200;
+    font-size: 0.9rem;
+    align-self: center;
+    text-decoration: line-through;
+}
+
+.main__button {
+    background-color: var(--Dark-cyan);
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.main__button:hover {
+    background-color: var(--Very-Dark-cyan);
+    cursor: pointer;
+}
+
+.button__text {
+    color: var(--White);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.button__icon {
+    max-width: 20px;
+    height: 20px;
+}
+
+
+@media (width > 475px){
+    .main {
+        flex-direction: row;
+        width: 550px;
+        height: 420px;
+        margin: auto;
+    }
+
+    .main__background {
+        border-radius: 15px 0 0 15px;
+        height: 100%;
+        width: 50%;
+        background-image: url('../images/image-product-desktop.jpg');
+    }
+
+    .main__content {
+        width: 50%;
+    }
+
+    h1{
+        text-wrap: balance;
+    }
+}
