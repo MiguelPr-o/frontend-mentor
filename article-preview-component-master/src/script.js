@@ -1,19 +1,15 @@
-let contactButton = document.getElementById("contact-button");
+let shareButton = document.querySelector(".article-preview__share-button");
+const sharePanel = document.getElementById("share-panel");
 
-contactButton.addEventListener("click", ()=>{
-    const sectionInfo = document.querySelector(".main__section-info");
-    const classProfile = document.querySelector(".main__section-profile");
+shareButton.addEventListener("click", () => {
+    if(sharePanel.style.display === "none") {
+        sharePanel.style.display = "flex";
+        shareButton.style.backgroundColor = "hsl(210, 46%, 95%)";
+        document.querySelector(".article-preview__share-button svg path").setAttribute("fill", "hsl(214, 17%, 51%)");
 
-        sectionInfo.removeChild(classProfile);
-        sectionInfo.innerHTML += `<div class="main__section-profile-social">
-        <div class="main__section-profile-contact">
-            <p>SHARE</p>
-            <img src="../images/icon-facebook.svg" alt="facebook">
-            <img src="../images/icon-pinterest.svg" alt="pinterest">
-            <img src="../images/icon-twitter.svg" alt="twitter">
-        </div>
-        <div id="contact-button-2" class="main__section-profile-share">
-            <div class="social-media-img"></div>
-        </div>
-        </div>`;
+    }else {
+        sharePanel.style.display = "none";
+        shareButton.style.backgroundColor = "hsl(217, 19%, 35%)";
+        document.querySelector(".article-preview__share-button svg path").setAttribute("fill", "hsl(210, 46%, 95%)");
+    }
 })
